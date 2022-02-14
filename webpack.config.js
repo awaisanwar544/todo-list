@@ -26,6 +26,10 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(svg|ico|png|jpg|jpeg|webp|gif)$/,
+        type: 'asset/resource',
+      }
     ],
   },
   // plugins

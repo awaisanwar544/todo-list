@@ -7,6 +7,19 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+  <header>
     <h1><%= htmlWebpackPlugin.options.title %></h1>
+  </header>
+  <main>
+    <div id="todo-container">
+      <p>Today's To Do</p>
+      <input type="text" id="newtask" name="newtask" placeholder="Add to your list...">
+      <ul id="task-list">
+
+      </ul>
+      <p>Clear all completed</p>
+    </div>
+
+  </main>
 </body>
 </html>
