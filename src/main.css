@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(238, 238, 238);
-    text-align: center;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
 }
 
 main {
@@ -26,4 +26,3 @@ li {
   display: flex;
   align-items: center;
 }
-
