@@ -1,3 +1,28 @@
 body {
-    background-color: bisque;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+#todo-container {
+  padding: 1em;
+  box-shadow: 5px 10px 8px 10px #d3d3d3;
+  width: 40%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
 }
