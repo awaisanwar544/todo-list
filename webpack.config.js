@@ -30,6 +30,10 @@ module.exports = {
         test: /\.(svg|ico|png|jpg|jpeg|webp|gif)$/,
         type: 'asset/resource',
       },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
+      },
     ],
   },
   // plugins
