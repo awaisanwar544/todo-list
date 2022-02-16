@@ -4,19 +4,35 @@ import populateList from './modules/populateList.js';
 import TaskList from './modules/taskList.js';
 import Task from './modules/task.js';
 import clearList from './modules/clearList.js';
+import updateTaskEvent from './modules/updateTask.js';
+import removeTask from './modules/removeTask.js';
 
 const inputTask = document.querySelector('#newtask');
 const element = document.querySelector('#task-list');
 const newList = new TaskList();
 
+const delEvent = () => {
+  const del = document.querySelectorAll('.del');
+  del.forEach((item) => {
+    item.addEventListener('click', (event) => {
+      removeTask(newList, event.target.parentElement.id);
+      clearList(element);
+      populateList(newList, element);
+      delEvent();
+    });
+  });
+};
+
 inputTask.addEventListener('keypress', (event) => {
-  if (event.keyCode === 13 && event.target.value) {
+  if (event.key === 'Enter' && event.target.value) {
     event.preventDefault();
     const index = newList.storage.length + 1;
     const newTask = new Task(event.target.value, index);
     newList.addNew(newTask);
     event.target.value = '';
     clearList(element);
-    populateList(newList.storage, element);
+    updateTaskEvent(element, newList.storage);
+    populateList(newList, element);
+    delEvent();
   }
 });
