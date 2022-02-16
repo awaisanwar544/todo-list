@@ -34,15 +34,17 @@ li img {
   justify-self: end;
 }
 
-p {
+.taskText {
   width: 100%;
   height: 40px;
   margin: 0.5em;
   padding: 0.5em;
   line-height: 40px;
+  border: none;
+  background: transparent;
 }
 
-p:focus {
+.taskText:focus {
   border: none;
   outline: none;
 }
@@ -96,4 +98,9 @@ a {
 
 a:hover {
   color: rgb(255, 174, 0);
+}
+
+.doneTask {
+  text-decoration: line-through;
+  color: rgba(116, 116, 116, 0.767);
 }

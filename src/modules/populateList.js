@@ -4,12 +4,14 @@ import deleteIcon from '../assets/delete-icon.svg';
 const populateList = (list, target) => {
   list.storage.forEach((item) => {
     const li = document.createElement('li');
-    li.setAttribute('id', item.index);
+    li.setAttribute('id', `t${item.index}`);
     li.setAttribute('class', 'task');
     const checkbox = document.createElement('input');
-    const p = document.createElement('p');
-    p.setAttribute('contentEditable', 'true');
-    p.innerHTML = item.desc;
+    checkbox.setAttribute('class', 'check');
+    const p = document.createElement('input');
+    p.setAttribute('type', 'text');
+    p.value = item.desc;
+    p.className = 'taskText';
     const del = document.createElement('img');
     del.src = deleteIcon;
     del.setAttribute('class', 'del');
