@@ -6,7 +6,7 @@ module.exports = {
     main: path.resolve(__dirname, 'src/index.js'),
   },
   output: {
-    publicPath: '/to-do/',
+    publicPath: '/todo-list/',
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contenthash].js',
     clean: true,
