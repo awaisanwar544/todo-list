@@ -29,7 +29,8 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
-    "webpack-merge": "^5.8.0",
-    "html-webpack-plugin": "^5.5.0"
+    "gh-pages": "^3.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-merge": "^5.8.0"
   }
 }
