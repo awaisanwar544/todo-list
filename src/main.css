@@ -17,9 +17,17 @@ main {
   width: 80%;
 }
 
+#reset {
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.check {
+  cursor: pointer;
 }
 
 li {
@@ -32,6 +40,8 @@ li {
 
 li img {
   justify-self: end;
+  cursor: pointer;
+  z-index: 100;
 }
 
 .taskText {

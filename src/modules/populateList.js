@@ -8,6 +8,7 @@ const populateList = (list, target) => {
     li.setAttribute('class', 'task');
     const checkbox = document.createElement('input');
     checkbox.setAttribute('class', 'check');
+    checkbox.setAttribute('type', 'checkbox');
     const p = document.createElement('input');
     p.setAttribute('type', 'text');
     p.value = item.desc;
@@ -17,7 +18,6 @@ const populateList = (list, target) => {
     del.setAttribute('class', 'del');
     const drag = document.createElement('img');
     drag.src = dragIcon;
-    checkbox.setAttribute('type', 'checkbox');
     li.append(checkbox);
     li.append(p);
     li.append(del);
