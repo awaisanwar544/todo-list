@@ -18,6 +18,11 @@ const delComp = document.querySelector('#delComp');
 const newList = new TaskList();
 
 resetImage.src = resetIcon;
+resetImage.addEventListener('click', () => {
+  clearList(element);
+  newList.storage = [];
+  localStorage.clear();
+});
 
 const updateTaskEvent = () => {
   const inputEle = document.querySelectorAll('.taskText');

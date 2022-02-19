@@ -1,5 +1,7 @@
 const clearList = (element) => {
-  element.innerHTML = '';
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
 };
 
 export default clearList;

@@ -14,7 +14,7 @@ main {
 #todo-container {
   padding: 1em;
   box-shadow: 5px 10px 8px 10px #d3d3d3;
-  width: 40%;
+  width: 80%;
 }
 
 ul {
@@ -103,4 +103,10 @@ a:hover {
 .doneTask {
   text-decoration: line-through;
   color: rgba(116, 116, 116, 0.767);
+}
+
+@media only screen and (min-width: 600px) {
+  #todo-container {
+    width: 40%;
+  }
 }
