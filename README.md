@@ -5,6 +5,12 @@
 > A simple yet useful todo list webApp.
 
 
+
+https://user-images.githubusercontent.com/87834222/154968924-45feadb7-e5b8-4cd8-a2a2-b950f8eae3ff.mov
+
+
+
+
 ## Built With
 
 - HTML
