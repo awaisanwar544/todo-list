@@ -18,7 +18,7 @@ https://user-images.githubusercontent.com/87834222/154968924-45feadb7-e5b8-4cd8-
 - CSS
 - Webpack
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://awaisanwar544.github.io/todo-list/)
 
