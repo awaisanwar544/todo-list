@@ -1,17 +1,18 @@
 import TaskList from '../modules/taskList.js';
 
+const list = new TaskList();
+const item1 = {
+  index: 1,
+  desc: 'test description',
+  completed: false,
+};
+const item2 = {
+  index: 2,
+  desc: 'test description 2',
+  completed: false,
+};
+
 describe('addNew method', () => {
-  const list = new TaskList();
-  const item1 = {
-    index: 1,
-    desc: 'test description',
-    completed: false,
-  };
-  const item2 = {
-    index: 2,
-    desc: 'test description 2',
-    completed: false,
-  };
   test('updates the length to 1 of storage in TaskList', () => {
     list.addNew(item1);
     expect(list.storage).toHaveLength(1);
@@ -28,5 +29,16 @@ describe('addNew method', () => {
 
   test('adds right item to the storage in the task list 2', () => {
     expect(list.storage[1]).toBe(item2);
+  });
+});
+
+describe('removeItem method', () => {
+  test('Removes the item from the storage of TaskList', () => {
+    list.removeItem('1');
+    expect(list.storage).toHaveLength(1);
+  });
+
+  test('Removes the correct item from the storage of TaskList', () => {
+    expect(list.storage[0]).toHaveProperty('index', 2);
   });
 });
