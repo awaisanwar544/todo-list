@@ -18,7 +18,7 @@ describe('addNew method', () => {
     expect(list.storage).toHaveLength(1);
   });
 
-  test('adds right item to the storage in the task list 1', () => {
+  test('adds right item to the storage in TaskList', () => {
     expect(list.storage[0]).toBe(item1);
   });
 
@@ -27,7 +27,7 @@ describe('addNew method', () => {
     expect(list.storage).toHaveLength(2);
   });
 
-  test('adds right item to the storage in the task list 2', () => {
+  test('adds right item to the storage in TaskList', () => {
     expect(list.storage[1]).toBe(item2);
   });
 });
@@ -42,6 +42,7 @@ describe('removeItem method', () => {
     expect(list.storage[0]).toHaveProperty('index', 2);
   });
 });
+
 describe('Set index', () => {
   test('Set the index properly', () => {
     list.setIndexes();
