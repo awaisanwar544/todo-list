@@ -2,7 +2,7 @@
   "connector": {
     "name": "local",
     "options": {
-      "pattern": ["**", "!.git/**", "!node_modules/**", "!temp.html"]
+      "pattern": ["**", "!.git/**", "!node_modules/**", "!temp.html", "!coverage/**"]
     }
   },
   "extends": ["development"],
