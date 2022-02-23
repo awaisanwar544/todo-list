@@ -27,7 +27,7 @@ resetImage.addEventListener('click', () => {
 const updateTaskEvent = () => {
   const inputEle = document.querySelectorAll('.taskText');
   inputEle.forEach((item) => {
-    item.addEventListener('change', (e) => {
+    item.addEventListener('keyup', (e) => {
       e.preventDefault();
       updateTaskList(newList.storage, e.target.parentElement.id.replace(/[^0-9]/g, ''), e.target.value);
       addToLocalStorage(newList.storage);
@@ -63,14 +63,16 @@ const delEvent = () => {
 
 delComp.addEventListener('click', (e) => {
   e.preventDefault();
-  newList.storage = delCompleted(newList);
-  newList.setIndexes();
-  clearList(element);
-  populateList(newList, element);
-  addToLocalStorage(newList.storage);
-  updateEvent();
-  checkStatusOnLoad(newList);
-  delEvent();
+  if (newList.storage.length !== 0) {
+    newList.storage = delCompleted(newList);
+    newList.setIndexes();
+    clearList(element);
+    populateList(newList, element);
+    addToLocalStorage(newList.storage);
+    updateEvent();
+    checkStatusOnLoad(newList);
+    delEvent();
+  }
 });
 
 inputTask.addEventListener('keypress', (event) => {
@@ -82,11 +84,11 @@ inputTask.addEventListener('keypress', (event) => {
     event.target.value = '';
     clearList(element);
     populateList(newList, element);
-    updateTaskEvent();
-    delEvent();
-    updateEvent();
     addToLocalStorage(newList.storage);
+    updateEvent();
     checkStatusOnLoad(newList);
+    delEvent();
+    updateTaskEvent();
   }
 });
 
