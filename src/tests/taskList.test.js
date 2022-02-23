@@ -42,3 +42,9 @@ describe('removeItem method', () => {
     expect(list.storage[0]).toHaveProperty('index', 2);
   });
 });
+describe('Set index', () => {
+  test('Set the index properly', () => {
+    list.setIndexes();
+    expect(list.storage[0]).toHaveProperty('index', 1);
+  });
+});
