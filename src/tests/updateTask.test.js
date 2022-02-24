@@ -23,4 +23,9 @@ describe('Task Update', () => {
     updateTaskList(arr, 2, 'edited second task');
     expect(arr[1].desc).toBe('edited second task');
   });
+
+  test('check value is string', () => {
+    updateTaskList(arr, 2, 'second');
+    expect(Array.isArray(arr)).toBe(true);
+  });
 });
