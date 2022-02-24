@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple yet powerful app to keep track of everyday todos.",
   "scripts": {
-    "test": "jest --verbose --coverage",
+    "test": "jest --verbose",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --open --config webpack.dev.js",
     "deploy": "gh-pages -d dist"
