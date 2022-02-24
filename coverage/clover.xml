@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645718369036" clover="3.2.0">
-  <project timestamp="1645718369037" name="All files">
+<coverage generated="1645730335176" clover="3.2.0">
+  <project timestamp="1645730335176" name="All files">
     <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="9" coveredmethods="9" elements="20" coveredelements="19" complexity="0" loc="9" ncloc="9" packages="1" files="3" classes="3"/>
-    <file name="delCompleted.js" path="D:\Develoment Career\Microverse\Microverse-Projects\Module-2\todo-list\src\modules\delCompleted.js">
+    <file name="delCompleted.js" path="/Users/awaisanwar/Desktop/microverse/todo-list/src/modules/delCompleted.js">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="1" count="3" type="stmt"/>
     </file>
-    <file name="taskList.js" path="D:\Develoment Career\Microverse\Microverse-Projects\Module-2\todo-list\src\modules\taskList.js">
+    <file name="taskList.js" path="/Users/awaisanwar/Desktop/microverse/todo-list/src/modules/taskList.js">
       <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="1" methods="6" coveredmethods="6"/>
       <line num="3" count="1" type="stmt"/>
       <line num="7" count="2" type="stmt"/>
@@ -15,7 +15,7 @@
       <line num="16" count="1" type="stmt"/>
       <line num="17" count="1" type="stmt"/>
     </file>
-    <file name="updateTask.js" path="D:\Develoment Career\Microverse\Microverse-Projects\Module-2\todo-list\src\modules\updateTask.js">
+    <file name="updateTask.js" path="/Users/awaisanwar/Desktop/microverse/todo-list/src/modules/updateTask.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="4" type="stmt"/>
