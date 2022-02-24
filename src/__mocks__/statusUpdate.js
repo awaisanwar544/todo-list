@@ -10,14 +10,4 @@ const changeStatus = (list, event) => {
   }
 };
 
-const checkStatusOnLoad = (list) => {
-  list.storage.forEach((item) => {
-    const ref = document.querySelector(`#t${item.index}`);
-    if (item.completed) {
-      ref.children[0].checked = true;
-      ref.children[1].classList.add('doneTask');
-    }
-  });
-};
-
-export { changeStatus, checkStatusOnLoad };
+export default changeStatus;
