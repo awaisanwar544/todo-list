@@ -23,29 +23,48 @@ const list = {
   storage: arr,
 };
 
-const event = {
-  target: {
-    parentElement: {
-      id: 't2',
+describe('statusUpdate function if true', () => {
+  const event = {
+    target: {
+      parentElement: {
+        id: 't2',
+      },
+      checked: true,
+      nextSibling: {
+        classList: '',
+      },
     },
-    checked: true,
-    nextSibling: {
-      classList: '',
-    },
-  },
-};
-
-describe('statusUpdate function', () => {
+  };
   test('Updates Status if checked', () => {
     changeStatus(list, event);
     expect(list.storage[1].completed).toBe(true);
   });
 
-  test('Updates Status if checked', () => {
+  test('Updates class list if checked', () => {
     changeStatus(list, event);
     expect(event.target.nextSibling.classList).toBe('doneTask');
   });
+});
 
-  event.target.checked = false;
-  event.target.parentElement.id = 't1';
+describe('status update function if false', () => {
+  const event = {
+    target: {
+      parentElement: {
+        id: 't1',
+      },
+      checked: false,
+      nextSibling: {
+        classList: '',
+      },
+    },
+  };
+  test('Updates Status if not checked', () => {
+    changeStatus(list, event);
+    expect(list.storage[0].completed).toBe(false);
+  });
+
+  test('Updates class list if not checkec', () => {
+    changeStatus(list, event);
+    expect(event.target.nextSibling.classList).toBe('');
+  });
 });
