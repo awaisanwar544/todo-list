@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for taskList.js</title>
+    <title>Code coverage report for statusUpdate.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> taskList.js</h1>
+        <h1><a href="index.html">All files</a> statusUpdate.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">12.5% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/7</span>
+                <span class='fraction'>2/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/2</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
+                <span class="strong">12.5% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>2/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -85,58 +85,61 @@
 <a name='L20'></a><a href='#L20'>20</a>
 <a name='L21'></a><a href='#L21'>21</a>
 <a name='L22'></a><a href='#L22'>22</a>
-<a name='L23'></a><a href='#L23'>23</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">class TaskList {
-  constructor() {
-    this.storage = [];
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const changeStatus = <span class="fstat-no" title="function not covered" >(l</span>ist, event) =&gt; {
+<span class="cstat-no" title="statement not covered" >  console.log('i was called')</span>
+  let ref = <span class="cstat-no" title="statement not covered" >event.target.parentElement.id;</span>
+<span class="cstat-no" title="statement not covered" >  ref = ref.replace(/[^0-9]/g, '');</span>
+<span class="cstat-no" title="statement not covered" >  if (event.target.checked) {</span>
+<span class="cstat-no" title="statement not covered" >    list.storage[Number(ref) - 1].completed = true;</span>
+<span class="cstat-no" title="statement not covered" >    event.target.nextSibling.classList.add('doneTask');</span>
+  } else <span class="cstat-no" title="statement not covered" >if (!event.target.checked) {</span>
+<span class="cstat-no" title="statement not covered" >    list.storage[Number(ref) - 1].completed = false;</span>
+<span class="cstat-no" title="statement not covered" >    event.target.nextSibling.classList.remove('doneTask');</span>
   }
+};
 &nbsp;
-  addNew(item) {
-    this.storage.push(item);
-  }
-&nbsp;
-  removeItem(ref) {
-    this.storage = this.storage.filter((item) =&gt; item.index !== Number(ref));
-  }
-&nbsp;
-  setIndexes() {
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (this.storage.length &gt; 0) {
-      this.storage.forEach((item, i) =&gt; {
-        item.index = i + 1;
-      });
+const checkStatusOnLoad = <span class="fstat-no" title="function not covered" >(l</span>ist) =&gt; {
+<span class="cstat-no" title="statement not covered" >  list.storage.forEach(<span class="fstat-no" title="function not covered" >(i</span>tem) =&gt; {</span>
+    const ref = <span class="cstat-no" title="statement not covered" >document.querySelector(`#t${item.index}`);</span>
+<span class="cstat-no" title="statement not covered" >    if (item.completed) {</span>
+<span class="cstat-no" title="statement not covered" >      ref.children[0].checked = true;</span>
+<span class="cstat-no" title="statement not covered" >      ref.children[1].classList.add('doneTask');</span>
     }
-  }
-}
+  });
+};
 &nbsp;
-export default TaskList;</pre></td></tr></table></pre>
+export { changeStatus, checkStatusOnLoad };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Feb 25 2022 00:37:42 GMT+0500 (Pakistan Standard Time)
+                at Thu Feb 24 2022 22:48:01 GMT+0500 (Pakistan Standard Time)
             </div>
         <script src="prettify.js"></script>
         <script>

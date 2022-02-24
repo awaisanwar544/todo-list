@@ -12,6 +12,13 @@ const item2 = {
   completed: false,
 };
 
+describe('Constructor', () => {
+  test('Calls constructor properly', () => {
+    const expected = [];
+    expect(list.storage).toEqual(expect.arrayContaining(expected));
+  });
+});
+
 describe('addNew method', () => {
   test('updates the length to 1 of storage in TaskList', () => {
     list.addNew(item1);
