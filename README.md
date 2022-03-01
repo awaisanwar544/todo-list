@@ -31,6 +31,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 - Understanding of git and github
+- 
 ### Setup & Install
 - Clone repo on your local device using `git clone <link>` command
 
